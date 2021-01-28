@@ -1,13 +1,13 @@
 import React from 'react'
 import Header from './components/Header'
-import Container from './components/Container'
+import MainContainer from "./components/MainContainer"
 import { MainWrapper } from './style/mainStyle'
 
 const App = () => {
   return (
     <MainWrapper>
       <Header />
-      <Container />
+      <MainContainer />
     </MainWrapper>
   );
 }

@@ -6,9 +6,9 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons"
 const InputSearch = styled.div`
   grid-column-start: 1;
   grid-column-end: 4;
-  margin-top: 10%;
   border-bottom: 1px solid lightgray;
   padding-bottom: 10px;
+  margin-bottom: 48px;
 `
 
 const InputElement = styled.input`
