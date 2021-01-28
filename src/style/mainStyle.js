@@ -5,3 +5,7 @@ export const MainWrapper = styled.section`
   width: 100%;
   height: 100%;
 `
+
+export const InnerWrapper = styled.div`
+  padding: 5% 10%;
+`

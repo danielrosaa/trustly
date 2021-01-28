@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'react-router-dom'
 import styled from "styled-components"
 
 const Card = styled.div`
@@ -9,7 +10,6 @@ const Card = styled.div`
 `
 const ImgHeader = styled.div`
 	height: 45%;
-	/* background-image: url(${props => props.imgURL}); */
 	background-size: cover;
 	background-position: center;
 `
@@ -40,7 +40,6 @@ const CardInputs = styled.div`
     font-weight: 400px;
   }
 `
-
 const CardSelect = styled.select`
   color: #808080;
   border: 1px solid #e8e8e8;
@@ -50,12 +49,10 @@ const CardSelect = styled.select`
   padding: 0 5px;
   outline: none;
 `
-
 const CardPrice = styled.div`
   font-weight: 600;
   font-size: 21px;
 `
-
 const CardButton = styled.button`
   color: #fff;
   font-weight: 700;
@@ -99,7 +96,9 @@ const SneakerCard = props => {
           </CardSelect>
         </CardInputs>
 				<CardPrice>$ {props.sneaker.price}</CardPrice>
-				<CardButton>Add to cart</CardButton>
+        <Link to={`/product/${props.sneaker.id}`} style={{width: '100%'}}>
+				  <CardButton>Add to cart</CardButton>
+        </Link>
 			</CardInfo>
 		</Card>
 	)
