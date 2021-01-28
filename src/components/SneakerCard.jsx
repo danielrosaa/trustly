@@ -88,13 +88,13 @@ const SneakerCard = props => {
           <label>Size</label>
           <CardSelect>
             <option>39</option>
-            <option selected>41</option>
+            <option defaultValue>41</option>
             <option>42</option>
           </CardSelect>
           <label>Quantity</label>
           <CardSelect>
             <option>39</option>
-            <option selected>41</option>
+            <option defaultValue>41</option>
             <option>42</option>
           </CardSelect>
         </CardInputs>

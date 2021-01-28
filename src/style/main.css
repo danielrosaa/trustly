@@ -1,9 +1,10 @@
 @import './fonts/_typography.css';
-
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
   font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   min-height: 100vh;
