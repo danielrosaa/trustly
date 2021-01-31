@@ -10,8 +10,10 @@ const App = () => {
 		<Router>
 			<MainWrapper>
 				<Header />
-				<Route exact path="/" component={Home} />
-				<Route exact path="/product/:id" component={ProductInfo} />
+				<Switch>
+					<Route exact path="/" component={Home} />
+					<Route exact path="/product/:id" component={ProductInfo} />
+				</Switch>
 			</MainWrapper>
 		</Router>
 	)

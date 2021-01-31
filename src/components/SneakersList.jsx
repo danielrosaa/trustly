@@ -12,13 +12,19 @@ const SectionTag = styled.section`
 `
 
 const SneakersList = (props) => {
-  const [sneakers, setSneakers] = useState(null)
+	const [sneakers, setSneakers] = useState(null)
 
 	useEffect(() => {
-		api.get("/sneakers").then(response => {
-			setSneakers(response.data)
-		})
-  }, [])
+		api
+			.get("/sneakers")
+			.then(response => {
+				setSneakers(response.data)
+			})
+			.catch(err => {
+				console.log(err.response.data)
+			})
+	}, [])
+	
 
   function renderList() {
     return sneakers

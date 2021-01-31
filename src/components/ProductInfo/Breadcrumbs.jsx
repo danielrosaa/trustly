@@ -2,9 +2,10 @@ import React from "react"
 import styled from "styled-components"
 
 const Line = styled.div`
-	width: 100%;
+	width: 70%;
 	height: 1px;
 	background: lightgray;
+	margin: 0 auto;
 	margin-bottom: 10%;
 `
 const Steps = styled.div`
@@ -44,13 +45,13 @@ const Status = styled.div`
 		background: #61cb46;
 	}
 `
-const Breadcrumbs = () => {
+const Breadcrumbs = (props) => {
 	return (
 		<Line>
 			<Steps>
 				<Status>Cart</Status>
 				<Status>Payment options</Status>
-				<Status className="disabled">Receipt</Status>
+				<Status className={props.status || 'disabled'}>Receipt</Status>
 			</Steps>
 		</Line>
 	)
